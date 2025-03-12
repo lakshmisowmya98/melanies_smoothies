@@ -21,6 +21,7 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('fruit
 
 ingredients_list=st.multiselect('Choose up to 5 ingrediants:',my_dataframe,max_selections=5)
 
+import requests
 if ingredients_list:
     ingredients_string=''
     for fruit_chosen in ingredients_list:
